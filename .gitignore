@@ -13,7 +13,10 @@ Session.vim
 .netrwhist
 *~
 
+.uuid
+
 .extra
+.gitconfig
 .gnupg
 !.gnupg/gpg*.conf
 .i3/logfile

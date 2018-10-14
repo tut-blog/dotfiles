@@ -26,12 +26,14 @@ update_iwlwifi(){
 	cd "$tdir"
 
 	# clone the repo
-	git clone git://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/linux-firmware.git
+	git clone --depth 1 git://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/linux-firmware.git
 
 	# copy the firmware
 	cd linux-firmware
 	mkdir -p /lib/firmware
 	cp iwlwifi-7265*.ucode /lib/firmware
+	cp iwlwifi-800*.ucode /lib/firmware
+	cp iwlwifi-8265*.ucode /lib/firmware
 
 	# cleanup
 	rm -rf "$tdir"
